@@ -1,0 +1,47 @@
+<div class="container my-4">
+    <h2 class="mb-4">Editor de preguntas</h2>
+
+
+    {{#preguntasNoReportadas}}
+        <div class="d-flex flex-row pregunta">
+            <h2>{{pregunta}}</h2>
+            <a href="/juego/getViewEditarPregunta?id={{id}}" class="button_sumbit btn btn-sm btn-primary btn-block
+            ms-4">Editar</a>
+            <a href="/juego/eliminarPregunta?id={{id}}" class="button_sumbit btn btn-sm btn-primary btn-block
+            ms-4">Eliminar</a>
+
+            {{#aceptada}}
+            {{/aceptada}}
+            {{^aceptada}}
+                <a href="/juego/aceptarPregunta?id={{id}}" class="button_sumbit btn btn-sm btn-primary btn-block
+                ms-4">Aceptar</a>
+            {{/aceptada}}
+        </div>
+    {{/preguntasNoReportadas}}
+
+
+    <div class="border-top border-5 border-danger mt-4">
+        <h2 class="mt-4">Reportadas</h2>
+        {{#preguntasReportadas}}
+            <div class="d-flex flex-row pregunta">
+                <h2>{{pregunta}}</h2>
+                <a href="/juego/editarPregunta?id={{id}}" class="button_sumbit btn btn-sm btn-primary btn-block
+                ms-4">Editar</a>
+                <a href="/juego/eliminarPregunta?id={{id}}" class="button_sumbit btn btn-sm btn-primary btn-block
+                ms-4">Eliminar</a>
+
+                {{#aceptada}}
+                {{/aceptada}}
+                {{^aceptada}}
+                    <a href="/juego/reportar?id={{id}}" class="button_sumbit btn btn-sm btn-primary btn-block
+                    ms-4">Aceptar</a>
+                {{/aceptada}}
+
+                <a href="/juego/dejarDeReportar?id={{id}}" class="button_sumbit btn btn-sm btn-primary btn-block
+                ms-4">Aprobar</a>
+            </div>
+        {{/preguntasReportadas}}
+    </div>
+
+</div>
+

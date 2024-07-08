@@ -1,0 +1,50 @@
+<div id="loginbox" class="login container d-flex flex-column my-4">
+
+
+    <h3 class="mb-3">Iniciar sesion</h3>
+
+    {{#msg}}
+        <div class='container my-4 p-3 msg_guardar'
+        > {{msg}}</div>
+    {{/msg}}
+
+
+    <form action="/user/loginUsuario" method="POST" class="">
+        <input
+                id="username"
+                type="username"
+                name="username"
+                class="form-control mb-3"
+                placeholder="Username"
+                required
+        />
+
+        <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Contraseña"
+                class="form-control mb-3"
+                required
+        />
+
+        <div class="d-flex justify-content-center">
+            <button
+                    id="btn-login"
+                    class="btnLogin btn btn-sm btn-primary btn-block mb-3"
+                    type="Submit"
+            >
+                Login
+            </button>
+        </div>
+    </form>
+    <p class="m-0">
+        ¿No tenes cuenta?
+        <a
+                id="ir-a-registrarme"
+                href="/user/getViewRegister"
+                class="linkRegistrar m-0"
+        >Registrate</a
+        >
+    </p>
+</div>

@@ -1,0 +1,57 @@
+<div class="container my-4">
+
+    <h2 class="mb-4">Crear pregunta</h2>
+    <form action="/juego/crearPregunta" method="post" enctype="multipart/form-data">
+        <div class="d-flex flex-column inputPregunta">
+            <h5><label for="pregunta" class="">Pregunta:</label></h5>
+            <input type="text" id="pregunta" name="pregunta" class="form-control" required>
+        </div>
+
+        <div class="my-4">
+
+        <h5>Opciones</h5>
+        <div class="input-group mb-2">
+            <div class="input-group-text">
+                <label for="opcion1" class="me-2">Opcion 1</label>
+
+                <input  id="opcion1" class="form-check-input inputRadio" type="radio" name="opcion" value="opcion1" aria-label="Radio button for following text input">
+            </div>
+            <input type="text" class="form-control inputText" name="opcionText1" aria-label="Text input with radio button">
+        </div>
+
+        <div class="input-group mb-2">
+            <div class="input-group-text">
+                <label for="opcion2" class="me-2">Opcion 2</label>
+
+                <input id="opcion2" class="form-check-input inputRadio" type="radio" name="opcion" value="opcion2" aria-label="Radio button for following text input">
+            </div>
+            <input type="text" class="form-control inputText" name="opcionText2" aria-label="Text input with radio button">
+        </div>
+
+        <div class="input-group mb-2">
+            <div class="input-group-text">
+                <label for="opcion3" class="me-2">Opcion 3</label>
+
+                <input id="opcion3" class="form-check-input  inputRadio" type="radio" name="opcion" value="opcion3" aria-label="Radio button for following text input">
+            </div>
+            <input type="text" class="form-control inputText" name="opcionText3" aria-label="Text input with radio button">
+        </div>
+
+        <div class="input-group">
+            <div class="input-group-text">
+                <label for="opcion4" class="me-2">Opcion 4</label>
+
+                <input id="opcion4" class="form-check-input inputRadio" type="radio" name="opcion" value="opcion4" aria-label="Radio button for following text input">
+            </div>
+            <input type="text" class="form-control inputText" name="opcionText4" aria-label="Text input with radio button">
+        </div>
+
+        </div>
+
+        <button id="btn-login"
+                class="button_sumbit btn btn-sm btn-primary btn-block"
+                type="Submit">Crear
+        </button>
+    </form>
+</div>
+

@@ -1,0 +1,31 @@
+<div class="container my-4">
+    <h3>Estadísticas</h3>
+
+    <h5>Cantidad de usuarios: {{cantidadDeUsuarios}}</h5>
+    <h5>Cantidad de partidas jugadas: {{cantidadDePartidas}}</h5>
+    <h5>Cantidad de preguntas: {{cantidadDePreguntas}}</h5>
+    <h5>Cantidad de preguntas creadas: {{cantidadDePreguntasCreadas}}</h5>
+    <h5>Cantidad de usuarios nuevos (menos de una semana): {{usuariosNuevos}}</h5>
+    <h5>Porcentaje de preguntas respondidas correctamente: {{porcentajeCorrectas}}%</h5>
+
+    <h5>Cantidad de usuarios por país:</h5>
+    <ul>
+        {{#usuariosPorPais}}
+            <li>{{country}}: {{cantidad}}</li>
+        {{/usuariosPorPais}}
+    </ul>
+
+    <h5>Cantidad de usuarios por sexo:</h5>
+    <ul>
+        {{#usuariosPorSexo}}
+            <li>{{gender}}: {{cantidad}}</li>
+        {{/usuariosPorSexo}}
+    </ul>
+
+    <h5>Cantidad de usuarios por grupo de edad:</h5>
+    <ul>
+        {{#usuariosPorGrupoDeEdad}}
+            <li>{{grupo}}: {{cantidad}}</li>
+        {{/usuariosPorGrupoDeEdad}}
+    </ul>
+</div>

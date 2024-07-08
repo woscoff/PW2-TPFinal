@@ -1,0 +1,69 @@
+<div class="container my-4 formRegister">
+
+    <h2 class="mb-4">Mi cuenta</h2>
+
+    {{#user}}
+
+
+            <div class="d-flex justify-content-between mb-4">
+                <h5>Partidas jugadas: {{partidasJugadas}}</h5>
+
+                <h5>Partidas ganadas: {{partidasGanadas}}</h5>
+            </div>
+
+
+        <div class="d-flex flex-column mb-4">
+            <label for="full_name" class="">Nombre Completo:</label>
+            <input type="text" id="full_name" name="full_name" class="form-control" required readonly value="{{full_name}}">
+        </div>
+
+        <div class="d-flex flex-column mb-4">
+            <label for="birth_year" class="">Año de Nacimiento:</label>
+            <input type="text" id="birth_year" name="birth_year" class="form-control" required readonly value="{{birth_year}}" >
+        </div>
+
+        <div class="d-flex flex-column mb-4">
+            <label for="gender" class="">Sexo:</label>
+            <select id="gender" name="gender" class="form-select" required>
+                <option value="Masculino">Masculino</option>
+                <option value="Femenino">Femenino</option>
+                <option value="Prefiero no cargarlo">Prefiero no cargarlo</option>
+            </select>
+        </div>
+
+        <div class="d-flex flex-column mb-4">
+            <label for="country" class="">País:</label>
+            <input type="text" id="country" name="country" class="form-control" required readonly value="{{country}}">
+        </div>
+
+        <div class="d-flex flex-column mb-4">
+            <label for="city" class="">Ciudad:</label>
+            <input type="text" id="city" name="city" class="form-control" required readonly value="{{city}}">
+        </div>
+
+        <div class="d-flex flex-column mb-4">
+            <label for="email" class="">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required readonly value="{{email}}">
+        </div>
+
+        <div class="d-flex flex-column mb-4">
+            <label for="username" class="">Nombre de Usuario:</label>
+            <input type="text" id="username" name="username" class="form-control" required readonly value="{{username}}">
+        </div>
+
+
+        <a id="btn-login"
+                class="button_sumbit btnLogin btn btn-sm btn-primary btn-block d-flex justify-content-center"
+                href="/user/cerrarSesion">Cerrar sesion
+        </a>
+
+
+    {{/user}}
+
+</div>
+<script>
+    function desafiarJugador() {
+        var oponenteId = document.getElementById('oponente').value;
+        window.location.href = "/juego/desafiar/" + oponenteId;
+    }
+</script>

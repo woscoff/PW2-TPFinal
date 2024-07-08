@@ -1,0 +1,442 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f5efe6;
+}
+
+header {
+    background: #1a4d2e;
+    color: whitesmoke;
+    box-shadow: 2px 2px 15px rgb(192, 192, 192);
+}
+
+footer {
+    height: 10vh;
+    background: #e8dfca;
+}
+
+/*input, select {*/
+/*    background: #f5efe6 !important;*/
+/*    border: whitesmoke solid 2px !important;*/
+/*}*/
+
+/*input:focus, select:focus {*/
+/*    box-shadow: none !important;*/
+/*    border: whitesmoke solid 2px !important;*/
+/*    background: #e8dfca !important;*/
+/*}*/
+
+.input-group-text {
+    border: whitesmoke solid 2px !important;
+}
+
+
+.input-group-text:hover {
+    border: whitesmoke solid 2px !important;
+}
+
+button {
+    background: #f5efe6 !important;
+    border: whitesmoke solid 2px !important;
+}
+
+button:hover,
+button:focus-visible {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #e8dfca !important;
+}
+
+ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+/*NAVBAR*/
+.navbar li a {
+    color: white;
+}
+
+.navbar li a:hover {
+    color: darkgray;
+}
+
+
+.logo {
+    height: 50px;
+    filter: grayscale(100%);
+
+}
+
+
+/*LOGIN*/
+.login form input {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #e8dfca !important;
+}
+
+.login form input:hover {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #f5efe6 !important;
+}
+
+.login form button {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #e8dfca !important;
+    color: black;
+}
+
+.login form button:hover {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #f5efe6 !important;
+    color: black;
+}
+
+.linkRegistrar:hover {
+    color: gray;
+}
+
+/*REGISTER*/
+/*.formRegister button:hover {*/
+/*    box-shadow: none !important;*/
+/*    border: whitesmoke solid 2px !important;*/
+/*    background: #f5efe6 !important;*/
+/*    color: black;*/
+/*}*/
+
+/*.formRegister button {*/
+/*    box-shadow: none !important;*/
+/*    border: whitesmoke solid 2px !important;*/
+/*    background: #e8dfca !important;*/
+/*    color: black;*/
+/*}*/
+
+.formRegister div input, .formRegister div select {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #e8dfca !important;
+}
+
+
+.formRegister div input:hover, .formRegister div select:hover {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #f5efe6 !important;
+}
+
+
+/*Tabla pokemones*/
+
+.pokemones_tabla {
+    padding: 2.5px 0;
+    background-color: #4f6f52;
+    color: whitesmoke;
+}
+
+.tabla__titulos {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    padding: 2.5px;
+}
+
+.tabla__titulos h4 {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 5px 0;
+    margin: 0 2.5px;
+    background-color: #1a4d2e;
+}
+
+.tabla__titulos .modification {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 5px 0;
+    margin: 0 2.5px;
+    background-color: #1a4d2e;
+}
+
+.tabla__datos {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5px;
+    margin: 0;
+    position: relative;
+}
+
+.tabla__datos p {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    margin: 0 2.5px;
+    background-color: #1a4d2e;
+
+    overflow: hidden;
+}
+
+.tabla__campo {
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    margin: 0 2.5px;
+    background-color: #1a4d2e;
+}
+
+.tabla__campoLink:hover img {
+    opacity: 75%;
+}
+
+.tabla__campo img {
+    height: 85%;
+    padding: 5px 0;
+}
+
+.buttons_modification-delete {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    margin: 0 2.5px;
+    background-color: #1a4d2e;
+}
+
+.buttons_modification-delete form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.buttons_modification-delete a {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    color: whitesmoke;
+}
+
+.buttons_modification-delete a:hover {
+    color: #4f6f52;
+}
+
+.agregar_pokemon button {
+    background: #e8dfca !important;
+}
+
+.agregar_pokemon button:hover {
+    background: #f5efe6 !important;
+}
+
+
+/*MODAL*/
+
+.modal-content {
+    background: #f5efe6;
+    color: black;
+}
+
+.modal-body form input {
+    background: #e8dfca !important;
+    color: black;
+}
+
+.modal-body form input::file-selector-button {
+    background: #e8dfca !important;
+    color: black;
+}
+
+.modal-body form input:hover::file-selector-button {
+    background: #f5efe6 !important;
+    color: gray;
+}
+
+.modal-content button {
+    color: black;
+}
+
+.modal-content button:hover {
+    color: gray;
+}
+
+/*FORM EDIT*/
+
+.form_edit input {
+    background: #e8dfca !important;
+    color: black;
+}
+
+.form_edit input::file-selector-button {
+    background: #e8dfca !important;
+    color: black;
+}
+
+.form_edit input:hover::file-selector-button {
+    background: #f5efe6 !important;
+    color: gray;
+}
+
+.form_edit button {
+    background: #e8dfca !important;
+    color: black;
+}
+
+.form_edit button:hover {
+    background: #e8dfca !important;
+    color: gray;
+}
+
+/*INPUT TIPO*/
+
+.input_file div {
+    height: 10vh;
+}
+
+.input_file div img {
+    height: 100%;
+}
+
+/*MSG*/
+
+.msg_guardar {
+    background: #e8dfca;
+    border-radius: 10px;
+}
+
+/*INFO*/
+
+.img_info {
+    height: 50vh;
+}
+
+.img_info img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.tipo_info {
+    height: 50px;
+}
+
+.tipo_info img {
+    height: 100%;
+    object-fit: contain;
+}
+
+/*BUTTONS SUMBIT*/
+.button_sumbit {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #e8dfca !important;
+    color: black;
+}
+
+.button_sumbit:hover {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #f5efe6 !important;
+    color: black;
+}
+
+/*SELECT*/
+
+.modal-body form select {
+    background: #e8dfca !important;
+    color: black;
+}
+
+.modal-body form select:hover {
+    background: #f5efe6 !important;
+    color: gray;
+    cursor: pointer;
+}
+
+.modal-body form select:hover option {
+    background: #e8dfca !important;
+    color: black;
+}
+
+/*PARTIDA*/
+.input-group-text {
+    background-color: #e8dfca;
+}
+
+/*PREGUNTA*/
+.pregunta a{
+    height: fit-content;
+}
+
+/*CREAR PREGUNTA*/
+.inputPregunta input {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #e8dfca !important;
+}
+
+
+.inputPregunta input:hover {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #f5efe6 !important;
+}
+
+.inputText {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #e8dfca !important;
+}
+
+
+.inputText:hover {
+    box-shadow: none !important;
+    border: whitesmoke solid 2px !important;
+    background: #f5efe6 !important;
+}
+
+/*RAKING*/
+.rowRanking:hover{
+    background: #e8dfca !important;
+
+}
+
+@media (max-width: 768px) {
+    h4 {
+        font-size: 2vh;
+    }
+
+    p,
+    button,
+    input, select {
+        font-size: 1.5vh !important;
+    }
+}

@@ -1,0 +1,68 @@
+<div class="container my-4">
+    {{#user}}
+        <div class="d-flex justify-content-between mb-2">
+            <h5>{{username}}</h5>
+            <h5>Puntaje: {{points}}</h5>
+        </div>
+
+        <div class="d-flex">
+            <a id="btn-partida"
+               class="button_sumbit btnLogin btn btn-sm btn-primary btn-block d-flex justify-content-center me-4"
+               href="/juego/partida">Crear partida
+            </a>
+            <a id="btn-ranking"
+               class="button_sumbit btnLogin btn btn-sm btn-primary btn-block d-flex justify-content-center me-4"
+               href="/user/ranking">Ranking
+            </a>
+            <a id="btn-crearPregunta"
+               class="button_sumbit btnLogin btn btn-sm btn-primary btn-block d-flex justify-content-center me-4"
+               href="/juego/getViewCrearPregunta">Crear pregunta
+            </a>
+            {{#editor}}
+                <a id="btn-administrarPreguntas"
+                   class="button_sumbit btnLogin btn btn-sm btn-primary btn-block d-flex justify-content-center me-4"
+                   href="/juego/getViewAdministrarPreguntas">Administrar preguntas
+                </a>
+            {{/editor}}
+            {{#administrator}}
+                <a id="btn-estadisticas"
+                   class="button_sumbit btnLogin btn btn-sm btn-primary btn-block d-flex justify-content-center"
+                   href="/user/estadisticas">Estadísticas
+                </a>
+            {{/administrator}}
+        </div>
+    {{/user}}
+
+    {{#aviso}}
+        <div class='container my-4 p-3 msg_guardar'>
+            <h4 class="m-0">{{aviso}}</h4>
+        </div>
+    {{/aviso}}
+
+    {{#error}}
+        <div class='container my-4 p-3 msg_guardar'>
+            <h4 class="m-0 text-danger">{{error}}</h4>
+        </div>
+    {{/error}}
+
+    {{#desafio}}
+        <div class="container my-4">
+            <h2>Desafío en Progreso</h2>
+            <p>Puntaje del desafiado: {{desafio.respuestasBot}}</p>
+            <div class="d-flex justify-content-center">
+                <a href="/juego/partida" class="btn btn-primary">Comenzar Partida</a>
+            </div>
+        </div>
+    {{/desafio}}
+
+    {{#resultado}}
+        <div class="container my-4">
+            <h2>Resultado del Desafío</h2>
+            <p>Tus respuestas correctas: {{resultado.respuestasJugador}}</p>
+            <p>Respuestas correctas del desafiado: {{resultado.respuestasBot}}</p>
+            <h3>Ganador: {{resultado.ganador}}</h3>
+            <p>{{resultado.mensaje}}</p>
+            <a class="btn btn-primary" href="/">Volver al inicio</a>
+        </div>
+    {{/resultado}}
+</div>

@@ -1,0 +1,83 @@
+<div class="container my-4">
+
+    <h2 class="mb-4">Editar pregunta</h2>
+
+    {{#pregunta}}
+        <form action="/juego/editarPregunta?id={{id}}" method="post" enctype="multipart/form-data">
+            <div class="d-flex flex-column inputPregunta">
+                <h5><label for="pregunta" class="">Pregunta:</label></h5>
+                <input type="text" id="pregunta" name="pregunta" class="form-control" required value="{{pregunta}}">
+            </div>
+
+            <div class="my-4">
+
+                <h5>Opciones</h5>
+
+                {{#opcion1}}
+                    <div class="input-group mb-2">
+                        <div class="input-group-text">
+                            <label for="opcion1" class="me-2">Opcion 1</label>
+
+                            <input id="opcion1" class="form-check-input inputRadio" type="radio" name="opcion"
+                                   value="{{id}}" aria-label="Radio button for following text input"
+                                   {{#esCorrecta}}checked{{/esCorrecta}}>
+                        </div>
+                        <input type="text" class="form-control inputText" name="opcionText{{id}}"
+                               aria-label="Text input with radio button" value="{{respuesta}}">
+                    </div>
+                {{/opcion1}}
+
+                {{#opcion2}}
+                    <div class="input-group mb-2">
+                        <div class="input-group-text">
+                            <label for="opcion2" class="me-2">Opcion 2</label>
+
+                            <input id="opcion2" class="form-check-input inputRadio" type="radio" name="opcion"
+                                   value="{{id}}" aria-label="Radio button for following text input"
+                                   {{#esCorrecta}}checked{{/esCorrecta}}>
+                        </div>
+                        <input type="text" class="form-control inputText" name="opcionText{{id}}"
+                               aria-label="Text input with radio button" value="{{respuesta}}">
+                    </div>
+                {{/opcion2}}
+
+                {{#opcion3}}
+                    <div class="input-group mb-2">
+                        <div class="input-group-text">
+                            <label for="opcion3" class="me-2">Opcion 3</label>
+
+                            <input id="opcion3" class="form-check-input  inputRadio" type="radio" name="opcion"
+                                   value="{{id}}" aria-label="Radio button for following text input"
+                                   {{#esCorrecta}}checked{{/esCorrecta}}>
+                        </div>
+                        <input type="text" class="form-control inputText" name="opcionText{{id}}"
+                               aria-label="Text input with radio button" value="{{respuesta}}">
+                    </div>
+                {{/opcion3}}
+
+                {{#opcion4}}
+                    <div class="input-group">
+                        <div class="input-group-text">
+                            <label for="opcion4" class="me-2">Opcion 4</label>
+
+                            <input id="opcion4" class="form-check-input inputRadio" type="radio" name="opcion"
+                                   value="{{id}}" aria-label="Radio button for following text input"
+                                   {{#esCorrecta}}checked{{/esCorrecta}}>
+                        </div>
+                        <input type="text" class="form-control inputText" name="opcionText{{id}}"
+                               aria-label="Text input with radio button" value="{{respuesta}}">
+                    </div>
+                {{/opcion4}}
+
+
+            </div>
+
+            <button id="btn-login"
+                    class="button_sumbit btn btn-sm btn-primary btn-block"
+                    type="Submit">Editar
+            </button>
+        </form>
+
+    {{/pregunta}}
+</div>
+

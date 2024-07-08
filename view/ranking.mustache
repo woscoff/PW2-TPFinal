@@ -1,0 +1,13 @@
+<div class="container my-4">
+    <h2>Ranking</h2>
+
+    {{#users}}
+        <a class="d-flex justify-content-between mb-2 p-2 rowRanking" href="/user/jugador?user={{username}}">
+        <h5>{{username}}</h5>
+        <h5>Puntaje: {{points}}</h5>
+        </a>
+
+    {{/users}}
+
+</div>
+

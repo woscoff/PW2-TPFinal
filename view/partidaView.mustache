@@ -1,0 +1,37 @@
+<link rel="stylesheet" href="/public/css/partida.css">
+
+<body {{#categoria}}class="{{categoria}}"{{/categoria}}>
+<div class="container  mt-5">
+    <h1 class="my-4">Quiz</h1>
+    {{#categoria}}
+        <div class="cont-categoria">
+            <h3>{{categoria}}</h3>
+        </div>
+    {{/categoria}}
+    <div>
+        {{#pregunta}}
+            <div>
+                <h2 class="mb-">{{pregunta}}</h2>
+            </div>
+        {{/pregunta}}
+        <form action="/Juego/verificarRespuesta" method="post" class="d-flex flex-column">
+            {{#respuestas}}
+                <div class="input-group mb-3">
+                    <div class="input-group-text">
+                        <input class="form-check-input mt-0 me-2" type="radio" name="respuesta"
+                               value="{{respuesta}}"
+                               aria-label="Checkbox for following text input">
+                        <label>{{respuesta}}</label>
+                    </div>
+                </div>
+            {{/respuestas}}
+            <button type="submit" class="button_sumbit btn btn-sm btn-primary btn-block mt-2 mb-4">Responder</button>
+        </form>
+        {{#Racha}}
+            <div class='container mb-4 p-3 msg_guardar'> <h4 class="m-0">Tu racha: {{Racha}} / 5</h4></div>
+        {{/Racha}}
+
+
+    </div>
+</div>
+</body>
